@@ -20,6 +20,15 @@ export function isSongInPlaylist(playlist, song) {
  */
 export function isAllEven(numbers) {
   // TODO
+  if (numbers.length === 0) {
+    return;
+  }
+  for (let i = 0; i < numbers.length; i++) {
+    if (numbers[i] % 2 !== 0) {
+      return false;
+    }
+  }
+  return true;
 }
 
 /**
@@ -33,4 +42,8 @@ export function isAllEven(numbers) {
  */
 export function haveEnoughFood(backpack, people) {
   // TODO
+  if (people === 0 || backpack.length >= people) {
+    return true;
+  }
+  return false;
 }
