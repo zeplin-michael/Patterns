@@ -49,7 +49,6 @@ export function haveEnoughFood(backpack, people) {
   // return foodCount >= people;
   let foodCount = 0;
   for (let i = 0; i < backpack.length; i++) {
-    console.log(backpack[i]);
     if (backpack[i].category === "food") {
       foodCount++;
     }
