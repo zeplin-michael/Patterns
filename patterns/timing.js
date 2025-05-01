@@ -42,8 +42,20 @@ export function isAllEven(numbers) {
  */
 export function haveEnoughFood(backpack, people) {
   // TODO
-  if (people === 0 || backpack.length >= people) {
-    return true;
+  if (people === 0) return true;
+  if (backpack.length == 0) return false;
+
+  // const foodCount = backpack.filter((item) => item.category === "food").length;
+  // return foodCount >= people;
+  let foodCount = 0;
+  for (let i = 0; i < backpack.length; i++) {
+    console.log(backpack[i]);
+    if (backpack[i].category === "food") {
+      foodCount++;
+    }
+    if (foodCount >= people) {
+      return true;
+    }
   }
   return false;
 }
